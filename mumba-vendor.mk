@@ -4562,20 +4562,6 @@ PRODUCT_PACKAGES += \
     libsw2dlut_dsp_skel \
     sensors.moto \
     sensors.ssc \
-    libbundleaidl \
-    libdlbvolaidl \
-    libdownmixaidl \
-    libdynamicsprocessingaidl \
-    libldnhncr \
-    libloudnessenhanceraidl \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libreverbaidl \
-    libswgamedapaidl \
-    libswspatializeraidl \
-    libvisualizeraidl \
-    libvolumelistener \
     vendor.libdpmctmgr \
     vendor.libdpmfdmgr \
     vendor.libdpmframework \
