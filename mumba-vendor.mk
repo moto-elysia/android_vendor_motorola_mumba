@@ -4484,7 +4484,6 @@ PRODUCT_PACKAGES += \
     libvideoutils \
     libvidhance \
     libvmfilexfer \
-    libvmmem \
     libwfdaac_vendor \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
