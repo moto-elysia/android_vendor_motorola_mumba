@@ -4888,6 +4888,7 @@ PRODUCT_PACKAGES += \
     port-bridge \
     power_off_alarm \
     ppd \
+    pstore_annotate \
     qcc-vendor \
     qdcmss \
     qesdk-manager \
