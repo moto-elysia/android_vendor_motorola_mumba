@@ -4942,3 +4942,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+ifeq ($(TARGET_HAS_FM),true)
+
+PRODUCT_PACKAGES += \
+    fm_helium \
+    libfm-hci \
+    vendor.qti.hardware.fm-V1-ndk \
+    vendor.qti.hardware.fm@1.0 \
+    fm_hci.xml
+
+endif
