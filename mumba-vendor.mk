@@ -4506,6 +4506,7 @@ PRODUCT_PACKAGES += \
     libswdapaidl \
     libswgamedapaidl \
     libswspatializeraidl \
+    libv4a_aidl \
     vendor.dolby.dms-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.libdpmctmgr \
@@ -4674,6 +4675,7 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
+    ViPER4Android \
     ImsRcsService \
     QCC \
     QtiTelephonyService \

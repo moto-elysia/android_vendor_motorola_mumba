@@ -20711,6 +20711,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libv4a_aidl",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libv4a_aidl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbinder_ndk",
+                "libbase",
+                "libfmq",
+                "libcutils",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.dolby.dms-V1-ndk",
     owner: "motorola",
     strip: {
@@ -25280,6 +25309,18 @@ android_app_import {
     name: "HotwordEnrollmentYGoogleHEXAGON_WIDEBAND",
     owner: "motorola",
     apk: "proprietary/product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "ViPER4Android",
+    owner: "motorola",
+    apk: "proprietary/product/priv-app/ViPER4Android/ViPER4Android.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
