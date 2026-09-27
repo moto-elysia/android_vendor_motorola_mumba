@@ -3299,7 +3299,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mumba/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/motorola/mumba/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/motorola/mumba/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
-    vendor/motorola/mumba/proprietary/product/etc/permissions/privapp-permissions-com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.euicc.xml \
     vendor/motorola/mumba/proprietary/recovery/root/vendor/firmware/ILITEK_FW_TXD:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/ILITEK_FW_TXD \
     vendor/motorola/mumba/proprietary/recovery/root/vendor/firmware/boe_chipone_firmware.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/boe_chipone_firmware.bin \
     vendor/motorola/mumba/proprietary/recovery/root/vendor/firmware/csot_chipone_firmware.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/csot_chipone_firmware.bin \
@@ -4667,7 +4666,6 @@ PRODUCT_PACKAGES += \
     IWlanService \
     TimeService \
     uimgbaservice \
-    EuiccGoogle \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     ViPER4Android \
@@ -4937,5 +4935,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm-V1-ndk \
     vendor.qti.hardware.fm@1.0 \
     fm_hci.xml
+
+endif
+
+ifeq ($(TARGET_HAS_ESIM),true)
+
+PRODUCT_COPY_FILES += \
+    vendor/motorola/mumba/proprietary/product/etc/permissions/privapp-permissions-com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.euicc.xml
+
+PRODUCT_PACKAGES += \
+    EuiccGoogle
 
 endif
